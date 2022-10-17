@@ -5,7 +5,7 @@ function Popup({ image, desc, category, show, setShow }) {
     const handleClose = () =>setShow(false);
     return (
         <>
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
                 <Modal.Title>{category}</Modal.Title>
             </Modal.Header>
