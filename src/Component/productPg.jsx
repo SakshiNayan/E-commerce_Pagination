@@ -17,14 +17,15 @@ function ProductPg() {
     const [data, setdata]= useState([])
     // const [show,setshow]=useState()
     const [get , setget] = useState(true)
+    
     const handleSelect=(e)=>{
-        const targetval = e.target.value
+        //const targetval = e.target.value
         // setshow(e.target.value)
-        if(targetval === 'all'){
+        if(e.target.value === 'all'){
             setget(!get)
         }else{
             const newdata = alldata.filter((item)=>{
-                return item.category.includes(targetval)
+                return item.category.includes(e.target.value)
             })
             setdata(newdata)
         }
@@ -45,12 +46,12 @@ function ProductPg() {
             <select onChange={(e)=>{handleSelect(e)}}>
                 <option value='all'>All</option>
                 <option value='electronic'>Electronics</option>
-                <option value='jwellery'>Jwellery</option>
+                <option value='Jwellery'>Jwellery</option>
                 <option value='women'>Women's Cloths</option>
                 <option value='men'>Men's Cloths</option>
             </select>
         </div>
-        
+
         <div id='main-body'>
             {data.slice(pagination.start , pagination.end).map((item,i)=>{
                 return(

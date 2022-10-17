@@ -1,0 +1,15 @@
+.heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemBody {
+    display: flex;
+    margin-top: 20px;
+}
+#itemCard{
+    width: 500px;
+    height: 400px;
+    margin-left: 30%;
+    margin-top: 30%;
+}
